@@ -1,0 +1,49 @@
+# Linux
+
+## Notes
+If you want to be software developer, you need to learn Linux. If don't, tou can't see beyond localhost.
+
+## Code Snippets
+
+- Display biggest files on disk:
+
+```
+sudo du -a / 2>/dev/null | sort -n -r | head -n 20
+```
+
+or:
+
+```
+sudo ncdu -x /
+
+```
+
+[ncdu](https://www.cyberciti.biz/open-source/install-ncdu-on-linux-unix-ncurses-disk-usage/)
+
+- Kill specific ports:
+
+```
+sudo lsof -t -i tcp:8080 | xargs kill -9
+```
+
+- Change timezone:
+
+```
+sudo timedatectl set-timezone Europe/Istanbul
+```
+
+- Create large file for testing:
+
+```
+fallocate -l 50G big_file
+```
+
+- Kill all process as name is "hugo":
+
+```
+ps aux | grep hugo | grep -v grep | awk '{print $2}'
+```
+
+## Links
+
+1. [Move huge files from remote/local to \*](https://www.xmodulo.com/resume-large-scp-file-transfer-linux.html)

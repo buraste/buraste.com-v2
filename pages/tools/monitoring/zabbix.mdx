@@ -1,0 +1,30 @@
+# Zabbix
+
+## Notes
+It's my favorite tool ever!
+
+## Code Snippets
+
+- Zabbix in Docker:
+````
+ZBX_HOSTNAME: host name
+ZBX_SERVER_HOST: zabbix server ip
+````
+- Monitor to zabbix server (located server):
+````
+1. Find the ip for zabbix agent on docker instance
+docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' zabbix-agent
+2. Put the ip to "interface ip" in the Zabbix interface
+3. Wait to pinging
+````
+
+## Links
+
+1. https://github.com/heyValdemar/zabbix-traefik-letsencrypt-docker-compose/blob/main/zabbix-traefik-letsencrypt-docker-compose.yml
+2. https://erbalvindersingh.medium.com/setting-up-and-running-zabbix-along-with-nginx-and-postgresql-using-docker-compose-2b1f011b0ba6
+3. https://fabianlee.org/2019/10/06/zabbix-using-docker-compose-to-install-and-upgrade-zabbix/
+4. https://github.com/carryontech/zabbix-docker-compose/blob/master/docker-compose.yml
+5. https://developpaper.com/zabbix-monitoring-docker-application-configuration/
+6. https://www.tecmint.com/monitor-docker-containers-with-zabbix-monitoring/
+7. https://github.com/Mettmett/docker-compose/blob/master/traefik-nginx-wordpress-sql-redis/docker-compose.yml
+8. https://bestmonitoringtools.com/zabbix-web-monitoring-create-web-scenarios-with-examples/

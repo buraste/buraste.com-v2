@@ -1,0 +1,25 @@
+# MySQL
+
+## Code Snippets
+
+- Key buffer errors:
+
+```
+Increase Key Buffer ( yours is currently 64MB, but total indexes are 116M, so put at least 128MB). Should help immediately.
+	2.	Run mysqloptimize and mysqlrepair on your tables
+	3.	Increase table cache/ decrease total number of tables to increase the table cache hit rate. Maybe you've got some unused or old tables which could be deleted.
+Other recommended confugration options:
+	•	log_slow_queries = /var/log/mysql/mysql-slow.log
+	•	long_query_time = 4
+	•	log-queries-not-using-indexes
+Check log file after some time.
+```
+
+## Links
+
+1. https://www.wpspeedfix.com/speed-up-wordpress-database-queries/
+2. https://mediatemple.net/community/products/dv/360039253131/troubleshooting-mysql-server-has-gone-away-wordpress-error
+3. [Mysql Tuner](https://www.linode.com/docs/guides/how-to-optimize-mysql-performance-using-mysqltuner/)
+4. [Optimize table](https://phoenixnap.com/kb/mysql-optimize-table)
+5. [Tune MySQL for Wordpress Site](https://stackoverflow.com/questions/60218170/how-can-tune-mysql-for-wordpress-sites)
+6. [MySQL 100% CPU Usage](https://serverfault.com/questions/220188/mysql-process-goes-over-100-of-cpu-usage)

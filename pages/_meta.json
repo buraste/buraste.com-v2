@@ -1,15 +1,23 @@
 {
-  "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
+  "index": {
+    "title": "buraste's garden",
+    "display": "hidden"
+  },
+  "home": {
+    "title": "Home 🏠",
+    "type": "page",
+    "href": "/"
+  },
   "about": {
     "title": "About",
-    "type": "page"
+    "type": "page",
+    "href": "https://buraste.com/about-me",
+    "newWindow": true
   },
   "contact": {
     "title": "Contact ↗",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://twitter.com/helloburaste",
     "newWindow": true
   }
 }

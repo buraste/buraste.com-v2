@@ -1,0 +1,21 @@
+# Configs
+
+## Notes
+
+They are configs/commands for Wordpress configruation:
+
+- Best Wordpress Directory Permissions:
+
+```
+sudo find /var/www/html/ -type d -exec chmod 750 {} \;
+sudo find /var/www/html/ -type f -exec chmod 640 {} \;
+```
+
+- Open debugger:
+
+````
+define('WP_DEBUG', true);
+define('WP_DEBUG_LOG', true);
+define('WP_DEBUG_DISPLAY', true);
+```
+````

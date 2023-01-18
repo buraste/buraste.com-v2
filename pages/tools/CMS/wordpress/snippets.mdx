@@ -1,0 +1,35 @@
+# Snippets
+
+## Notes
+
+Don't use before test!
+
+## Code Snippets
+
+- Run script only specific user like "administra":
+
+```
+$user = wp_get_current_user();
+    if ( 'administra' !== $user->user_login ) {
+        return;
+    }
+
+```
+
+- Show zodiac and chakra on single product page:
+
+```
+add_action( 'woocommerce_before_add_to_cart_form', 'display_zodiacs');
+function display_zodiacs() {
+	global $product;
+    $id = $product->get_id();
+    $terms = wp_get_post_terms($id, 'burclar');
+	$terms_list = explode(',', $terms);
+    if (!is_wp_error($terms) && !empty($terms)) { ?>
+        <div class="zodiac-term-title"><p>Uyumlu Burçlar: <a href="<?php echo esc_url(get_term_link($terms[0])); ?>"><?php echo esc_html($terms[0]->name); ?></a></p><?php echo $terms_list; ?></div>
+    <?php }
+}
+
+```
+
+## Links

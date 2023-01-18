@@ -1,0 +1,42 @@
+# WP-CLI
+
+## Notes
+
+I always use wp-cli on Wordpress products. I change alias from "wp-cli" to "wp" for easy usage:
+
+```
+alias wp='wp --allow-root'
+```
+
+## Code Snippets
+
+- Search - repleace:
+
+````
+wp search-replace 'https://octo.house' 'http://octo.house' --allow-root```
+````
+
+- Delete only orders on WooCommerce:
+
+```
+wp post delete $(wp post list --field=ID --post_type="shop_order") --force
+```
+
+- Activate - Deactivate Plugin with WP-CLI:
+
+```
+wp plugin deactivate code-snippets
+wp plugin activate code-snippets
+```
+
+- Install specific version of plugin:
+
+```
+wp plugin install autoptimize --version=2.9.1
+
+```
+
+## Links
+
+- [Installing wp-cli with docker-compose](https://mklasen.com/adding-and-using-wp-cli-in-a-docker-compose-setup/)
+- [wp db repair | WP-CLI Command | WordPress Developer Resources](https://developer.wordpress.org/cli/commands/db/repair/)

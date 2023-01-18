@@ -1,0 +1,27 @@
+# Docker
+
+## Code Snippets
+
+- Print container ip as named:
+
+```
+docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container_name_or_id
+```
+
+- Create Nginx server for testing:
+
+```
+docker run -it --rm -d -p 8080:80 --name web nginx
+```
+
+- Fix docker permission issue on Ubuntu 20.04:
+````
+sudo chown $(whoami):$(whoami) /var/run/docker.sock
+````
+
+## Links
+
+1. [Remove unused data](https://stackoverflow.com/questions/32723111/how-to-remove-old-and-unused-docker-images)
+2. https://www.ddmboss.com/2022/01/20/wordpress-docker-development-set-up-with-traefik-redis-and-nginx/
+3. https://computerz.solutions/docker-compose-wordpress-nginx-et-traefik/
+4. https://github.com/EugenMayer/docker-wordpress-boilerplate-simple
