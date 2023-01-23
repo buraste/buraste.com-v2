@@ -5,11 +5,25 @@ import { useRouter } from 'next/router';
 const config: DocsThemeConfig = {
   useNextSeoProps() {
     const { route } = useRouter();
-    if (route !== '/') {
-      return {
-        titleTemplate: "%s – buraste's garden 🪴",
-      };
-    }
+    return {
+      titleTemplate:
+        route !== '/' ? "%s – buraste's garden 🪴" : "buraste's garden 🪴",
+      description: `Hello! This is my digital garden or digital brain. I want to keep all of my learning. If you want to share any advice or idea, contact me!`,
+      openGraph: {
+        url: 'https://garden.buraste.com',
+        description: `Hello! This is my digital garden or digital brain. I want to keep all of my learning. If you want to share any advice or idea, contact me!`,
+        images: [
+          {
+            url: '/assets/og-burastecom.jpg',
+            width: 1200,
+            height: 628,
+            alt: 'Og Image Alt',
+            type: 'image/jpeg',
+          },
+        ],
+        siteName: `buraste's garden`,
+      },
+    };
   },
   sidebar: {
     defaultMenuCollapseLevel: 0,
@@ -35,10 +49,7 @@ const config: DocsThemeConfig = {
   head: (
     <>
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-      <meta httpEquiv='Content-Language' content='es' />
-      <meta name='description' content="buraste's digital garden" />
-      <meta name='og:description' content="buraste's digital garden" />
-      <meta name='og:title' content="buraste's digital garden" />
+      <meta httpEquiv='Content-Language' content='en' />
       <link
         key={'apple-touch-icon'}
         rel='apple-touch-icon'
