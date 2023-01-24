@@ -4,6 +4,10 @@ This is my Digital Garden, which consists of the information and notes I have.
 
 If you want to ask anything, contact me on [Twitter](https://twitter.com/helloburaste) 🤙
 
+Live: https://garden.buraste.com
+
+Home: https://buraste.com
+
 ## Nextra Docs Template
 
 This is a template for creating documentation with [Nextra](https://nextra.site).

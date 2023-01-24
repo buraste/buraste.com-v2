@@ -8,13 +8,13 @@ const config: DocsThemeConfig = {
     return {
       titleTemplate:
         route !== '/' ? "%s – buraste's garden 🪴" : "buraste's garden 🪴",
-      description: `Hello! This is my digital garden or digital brain. I want to keep all of my learning. If you want to share any advice or idea, contact me!`,
+      description: `Hello! This is my digital garden or digital brain. I want to keep all of my learning and notes. If you want to share any advice or idea, contact me!`,
       openGraph: {
         url: 'https://garden.buraste.com',
-        description: `Hello! This is my digital garden or digital brain. I want to keep all of my learning. If you want to share any advice or idea, contact me!`,
+        description: `Hello! This is my digital garden or digital brain. I want to keep all of my learning and notes. If you want to share any advice or idea, contact me!`,
         images: [
           {
-            url: '/assets/og-burastecom.jpg',
+            url: 'https://garden.buraste.com/assets/og-burastecom.jpg',
             width: 1200,
             height: 628,
             alt: 'Og Image Alt',
@@ -31,7 +31,7 @@ const config: DocsThemeConfig = {
   feedback: {
     content: null,
   },
-  docsRepositoryBase: 'https://github.com/buraste/buraste.com-v2',
+  docsRepositoryBase: 'https://github.com/buraste/buraste.com-v2/tree/main',
   footer: {
     text: (
       <span>
